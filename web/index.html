@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Receipt Designer</title>
+<link rel="stylesheet" href="app.css">
+<style id="print-page-style"></style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Receipt Designer</div>
+  <div class="actions">
+    <label class="zoom">Zoom <input type="range" id="zoom" min="0.6" max="2.5" step="0.05" value="1.4"><span id="zoomVal">140%</span></label>
+    <label class="chk"><input type="checkbox" id="showGuides"> Guides</label>
+    <button id="btnImport" class="ghost">Import JSON</button>
+    <button id="btnReset" class="ghost">Reset to defaults</button>
+    <button id="btnPrint" class="ghost">Print / Save PDF</button>
+    <button id="btnExport" class="primary">Export spec</button>
+    <input type="file" id="importFile" accept="application/json" hidden>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="panel" id="panel"></aside>
+  <section class="stage">
+    <div class="stage-info" id="stageInfo"></div>
+    <div class="paper-wrap" id="paperWrap">
+      <div class="paper" id="paper"></div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

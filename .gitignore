@@ -1,0 +1,4 @@
+*.exe
+exports/
+receipt-design.json
+.DS_Store
